@@ -4,7 +4,7 @@ let gestorAmp, gestorPitch;
 
 let FREC_MIN = 80;
 let FREC_MAX = 1000;
-let AMP_MIN = 0.02;
+let AMP_MIN = 0.0015;
 let AMP_MAX = 0.3;
 
 let estado = "esperando";
@@ -46,7 +46,7 @@ function draw() {
   let vol = mic.getLevel();
   gestorAmp.actualizar(vol);
 
-  haySonido = gestorAmp.filtrada > 0.02;
+  haySonido = gestorAmp.filtrada > 0.0015;
   let inicioSonido = haySonido && !antesHabiaSonido;
   let finSonido = !haySonido && antesHabiaSonido;
 
