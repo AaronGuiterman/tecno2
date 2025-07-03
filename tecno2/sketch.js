@@ -46,7 +46,7 @@ function draw() {
   let vol = mic.getLevel();
   gestorAmp.actualizar(vol);
 
-  haySonido = gestorAmp.filtrada > 0.1;
+  haySonido = gestorAmp.filtrada > 0.01;
   let inicioSonido = haySonido && !antesHabiaSonido;
   let finSonido = !haySonido && antesHabiaSonido;
 
